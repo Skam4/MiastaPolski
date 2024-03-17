@@ -25,80 +25,160 @@
     
     <div class="center-container">
 
-        <div id="app">
+        <!-- <div id="app">
             <div style="position: absolute; top: 0; right: 0; margin-top: 1em; margin-right: 2em; text-align: center;">
                 <button @click="wcisnijPrzycisk" :class="{ 'green': isGreen, 'blue': !isGreen }" style="padding: 1em; color: black; order: none; border-radius: 5px; cursor: pointer; font-size: 1em;">{{przycisk_text}}</button>
             </div>
 
-        </div>
+        </div> -->
         
             <div class="container">
-                <img src="images/Poland.jpg" style="width: 50em"/>
-                <!-- <img src="images/Miasta.jpg" style="width: 50em"/> -->
+                <!-- <img src="images/Poland.jpg" style="width: 50em"/> -->
+                <img src="images/Miasta.jpg" style="width: 50em"/>
 
-                <div v-if="isGreen == true">
-                    <span class="city-name" id="NazwaMiasta1" style="position: absolute; top: 300px; left: 519px; display: none;">Warszawa</span>
-                    <span class="city-name" id="NazwaMiasta2" style="position: absolute; top: 573px; left: 444px; display: none;">Kraków</span>
-                    <span class="city-name" id="NazwaMiasta3" style="position: absolute; top: 449px; left: 222px; display: none;">Wrocław</span>
-                    <span class="city-name" id="NazwaMiasta4" style="position: absolute; top: 371px; left: 407px; display: none;">Łódź</span>
-                    <span class="city-name" id="NazwaMiasta5" style="position: absolute; top: 289px; left: 217px; display: none;">Poznań</span>
-                    <span class="city-name" id="NazwaMiasta6" style="position: absolute; top: 55px; left: 349px; display: none;">Gdańsk</span>
-                    <span class="city-name" id="NazwaMiasta7" style="position: absolute; top: 161px; left: 47px; display: none;">Szczecin</span>
-                    <span class="city-name" id="NazwaMiasta8" style="position: absolute; top: 423px; left: 643px; display: none;">Lublin</span>
-                    <span class="city-name" id="NazwaMiasta9" style="position: absolute; top: 201px; left: 297px; display: none;">Bydgoszcz</span>
-                    <span class="city-name" id="NazwaMiasta10" style="position: absolute; top: 191px; left: 672px; display: none;">Białystok</span>
-                    <span class="city-name" id="NazwaMiasta11" style="position: absolute; top: 538px; left: 362px; display: none;">Katowice</span>
-                    <span class="city-name" id="NazwaMiasta12" style="position: absolute; top: 33px; left: 335px; display: none;">Gdynia</span>
-                    <span class="city-name" id="NazwaMiasta13" style="position: absolute; top: 483px; left: 371px; display: none;">Częstochowa</span>
-                    <span class="city-name" id="NazwaMiasta14" style="position: absolute; top: 408px; left: 535px; display: none;">Radom</span>
-                    <span class="city-name" id="NazwaMiasta15" style="position: absolute; top: 566px; left: 605px; display: none;">Rzeszów</span>
-                    <span class="city-name" id="NazwaMiasta16" style="position: absolute; top: 213px; left: 345px; display: none;">Toruń</span>
-                    <span class="city-name" id="NazwaMiasta17" style="position: absolute; top: 538px; left: 362px; display: none;">Sosnowiec</span>
-                    <span class="city-name" id="NazwaMiasta18" style="position: absolute; top: 478px; left: 484px; display: none;">Kielce</span>
-                    <span class="city-name" id="NazwaMiasta19" style="position: absolute; top: 538px; left: 362px; display: none;">Gliwice</span>
-                    <span class="city-name" id="NazwaMiasta20" style="position: absolute; top: 122px; left: 474px; display: none;">Olsztyn</span>
-                    <span class="city-name" id="NazwaMiasta21" style="position: absolute; top: 606px; left: 373px; display: none;">Bielsko-Biała</span>
-                    <span class="city-name" id="NazwaMiasta22" style="position: absolute; top: 538px; left: 362px; display: none;">Zabrze</span>
-                    <span class="city-name" id="NazwaMiasta23" style="position: absolute; top: 538px; left: 362px; display: none;">Bytom</span>
-                    <span class="city-name" id="NazwaMiasta24" style="position: absolute; top: 342px; left: 111px; display: none;">Zielona Góra</span>
-                    <span class="city-name" id="NazwaMiasta25" style="position: absolute; top: 573px; left: 300px; display: none;">Rybnik</span>
-                    <span class="city-name" id="NazwaMiasta26" style="position: absolute; top: 538px; left: 362px; display: none;">Ruda Śląska</span>
-                    <span class="city-name" id="NazwaMiasta27" style="position: absolute; top: 498px; left: 290px; display: none;">Opole</span>
-                    <span class="city-name" id="NazwaMiasta28" style="position: absolute; top: 580px; left: 390px; display: none;">Tychy</span>
-                    <span class="city-name" id="NazwaMiasta29" style="position: absolute; top: 243px; left: 83px; display: none;">Gorzów Wielkopolski</span>
-                    <span class="city-name" id="NazwaMiasta30" style="position: absolute; top: 535px; left: 389px; display: none;">Dąbrowa Górnicza</span>
-                </div>
-
+                <span class="city-name" id="NazwaMiasta1" style="position: absolute; top: 300px; left: 519px; display: none;">Warszawa</span>
                 <img src="images/Punkt.png" class="punkt" id="punkt1" style="top: 325px; left: 519px; display: none;"/> <!--Warszawa -->
+
+                <span class="city-name" id="NazwaMiasta2" style="position: absolute; top: 573px; left: 444px; display: none;">Kraków</span>
                 <img src="images/Punkt.png" class="punkt" id="punkt2" style="top: 593px; left: 444px; display: none;"/> <!--Kraków -->
+
+                <span class="city-name" id="NazwaMiasta3" style="position: absolute; top: 449px; left: 222px; display: none;">Wrocław</span>
                 <img src="images/Punkt.png" class="punkt" id="punkt3" style="top: 469px; left: 222px; display: none;"/> <!--Wrocław -->
+
+                <span class="city-name" id="NazwaMiasta4" style="position: absolute; top: 371px; left: 407px; display: none;">Łódź</span>
                 <img src="images/Punkt.png" class="punkt" id="punkt4" style="top: 391px; left: 407px; display: none;"/> <!--Łódź -->
+
+                <span class="city-name" id="NazwaMiasta5" style="position: absolute; top: 289px; left: 217px; display: none;">Poznań</span>
                 <img src="images/Punkt.png" class="punkt" id="punkt5" style="top: 309px; left: 217px; display: none;"/> <!--Poznań -->
+
+                <span class="city-name" id="NazwaMiasta6" style="position: absolute; top: 55px; left: 349px; display: none;">Gdańsk</span>
                 <img src="images/Punkt.png" class="punkt" id="punkt6" style="top: 74px; left: 344px; display: none;"/> <!--Gdańsk -->
+
+                <span class="city-name" id="NazwaMiasta7" style="position: absolute; top: 161px; left: 47px; display: none;">Szczecin</span>
                 <img src="images/Punkt.png" class="punkt" id="punkt7" style="top: 181px; left: 47px; display: none;"/> <!--Szczecin -->
+
+                <span class="city-name" id="NazwaMiasta8" style="position: absolute; top: 423px; left: 643px; display: none;">Lublin</span>
                 <img src="images/Punkt.png" class="punkt" id="punkt8" style="top: 443px; left: 643px; display: none;"/> <!--Lublin -->
+
+                <span class="city-name" id="NazwaMiasta9" style="position: absolute; top: 201px; left: 297px; display: none;">Bydgoszcz</span>
                 <img src="images/Punkt.png" class="punkt" id="punkt9" style="top: 221px; left: 297px; display: none;"/> <!--Bydgoszcz -->
+
+                <span class="city-name" id="NazwaMiasta10" style="position: absolute; top: 191px; left: 672px; display: none;">Białystok</span>
                 <img src="images/Punkt.png" class="punkt" id="punkt10" style="top: 211px; left: 672px; display: none;"/> <!--Białystok -->
+                
+                <span class="city-name" id="NazwaMiasta11" style="position: absolute; top: 538px; left: 362px; display: none;">Katowice</span>
                 <img src="images/Punkt.png" class="punkt" id="punkt11" style="top: 568px; left: 373px; display: none;"/> <!--Katowice -->
+
+                <span class="city-name" id="NazwaMiasta12" style="position: absolute; top: 33px; left: 335px; display: none;">Gdynia</span>
                 <img src="images/Punkt.png" class="punkt" id="punkt12" style="top: 53px; left: 335px; display: none;"/> <!--Gdynia -->
+
+                <span class="city-name" id="NazwaMiasta13" style="position: absolute; top: 483px; left: 371px; display: none;">Częstochowa</span>
                 <img src="images/Punkt.png" class="punkt" id="punkt13" style="top: 504px; left: 381px; display: none;"/> <!--Częstochowa -->
+
+                <span class="city-name" id="NazwaMiasta14" style="position: absolute; top: 408px; left: 535px; display: none;">Radom</span>
                 <img src="images/Punkt.png" class="punkt" id="punkt14" style="top: 428px; left: 535px; display: none;"/> <!--Radom -->
+
+                <span class="city-name" id="NazwaMiasta15" style="position: absolute; top: 566px; left: 605px; display: none;">Rzeszów</span>
                 <img src="images/Punkt.png" class="punkt" id="punkt15" style="top: 586px; left: 605px; display: none;"/> <!--Rzeszów -->
+
+                <span class="city-name" id="NazwaMiasta16" style="position: absolute; top: 213px; left: 345px; display: none;">Toruń</span>
                 <img src="images/Punkt.png" class="punkt" id="punkt16" style="top: 233px; left: 345px; display: none;"/> <!--Toruń -->
+
+                <span class="city-name" id="NazwaMiasta17" style="position: absolute; top: 538px; left: 362px; display: none;">Sosnowiec</span>
                 <img src="images/Punkt.png" class="punkt" id="punkt17" style="top: 563px; left: 383px; display: none;"/> <!--Sosnowiec -->
+                
+                <span class="city-name" id="NazwaMiasta18" style="position: absolute; top: 478px; left: 484px; display: none;">Kielce</span>
                 <img src="images/Punkt.png" class="punkt" id="punkt18" style="top: 498px; left: 484px; display: none;"/> <!--Kielce -->
+
+                <span class="city-name" id="NazwaMiasta19" style="position: absolute; top: 538px; left: 362px; display: none;">Gliwice</span>
                 <img src="images/Punkt.png" class="punkt" id="punkt19" style="top: 564px; left: 347px; display: none;"/> <!--Gliwice -->
+
+                <span class="city-name" id="NazwaMiasta20" style="position: absolute; top: 122px; left: 474px; display: none;">Olsztyn</span>
                 <img src="images/Punkt.png" class="punkt" id="punkt20" style="top: 142px; left: 474px; display: none;"/> <!--Olsztyn -->
+
+                <span class="city-name" id="NazwaMiasta21" style="position: absolute; top: 606px; left: 373px; display: none;">Bielsko-Biała</span>
                 <img src="images/Punkt.png" class="punkt" id="punkt21" style="top: 622px; left: 376px; display: none;"/> <!--Bielsko-Biała -->
+
+                <span class="city-name" id="NazwaMiasta22" style="position: absolute; top: 538px; left: 362px; display: none;">Zabrze</span>
                 <img src="images/Punkt.png" class="punkt" id="punkt22" style="top: 563px; left: 354px; display: none;"/> <!--Zabrze -->
+
+                <span class="city-name" id="NazwaMiasta23" style="position: absolute; top: 538px; left: 362px; display: none;">Bytom</span>
                 <img src="images/Punkt.png" class="punkt" id="punkt23" style="top: 558px; left: 362px; display: none;"/> <!--Bytom -->
+
+                <span class="city-name" id="NazwaMiasta24" style="position: absolute; top: 342px; left: 111px; display: none;">Zielona Góra</span>
                 <img src="images/Punkt.png" class="punkt" id="punkt24" style="top: 362px; left: 111px; display: none;"/> <!--Zielona Góra -->
-                <img src="images/Punkt.png" class="punkt" id="punkt25" style="top: 590px; left: 338px; display: none;"/> <!--Rybnik -->
+
+                <span class="city-name" id="NazwaMiasta25" style="position: absolute; top: 573px; left: 285px; display: none;">Rybnik</span>
+                <img src="images/Punkt.png" class="punkt" id="punkt25" style="top: 585px; left: 338px; display: none;"/> <!--Rybnik -->
+
+                <span class="city-name" id="NazwaMiasta26" style="position: absolute; top: 538px; left: 362px; display: none;">Ruda Śląska</span>
                 <img src="images/Punkt.png" class="punkt" id="punkt26" style="top: 574px; left: 359px; display: none;"/> <!--Ruda Śląska -->
+
+                <span class="city-name" id="NazwaMiasta27" style="position: absolute; top: 498px; left: 290px; display: none;">Opole</span>
                 <img src="images/Punkt.png" class="punkt" id="punkt27" style="top: 518px; left: 290px; display: none;"/> <!--Opole -->
+
+                <span class="city-name" id="NazwaMiasta28" style="position: absolute; top: 595px; left: 390px; display: none;">Tychy</span>
                 <img src="images/Punkt.png" class="punkt" id="punkt28" style="top: 585px; left: 375px; display: none;"/> <!--Tychy -->
+
+                <span class="city-name" id="NazwaMiasta29" style="position: absolute; top: 243px; left: 83px; display: none;">Gorzów Wielkopolski</span>
                 <img src="images/Punkt.png" class="punkt" id="punkt29" style="top: 263px; left: 92px; display: none;"/> <!--Gorzów Wielkopolski -->
+
+                <span class="city-name" id="NazwaMiasta30" style="position: absolute; top: 535px; left: 389px; display: none;">Dąbrowa Górnicza</span>
                 <img src="images/Punkt.png" class="punkt" id="punkt30" style="top: 555px; left: 389px; display: none;"/> <!--Dąbrowa Górnicza -->
+
+                <span class="city-name" id="NazwaMiasta31" style="position: absolute; top: 76px; left: 387px; display: none;">Elbląg</span>
+                <img src="images/Punkt.png" class="punkt" id="punkt31" style="top: 96px; left: 397px; display: none;"/> <!--Elbląg -->
+
+                <span class="city-name" id="NazwaMiasta32" style="position: absolute; top: 270px; left: 412px; display: none;">Płock</span>
+                <img src="images/Punkt.png" class="punkt" id="punkt32" style="top: 290px; left: 422px; display: none;"/> <!--Płock -->
+
+                <span class="city-name" id="NazwaMiasta33" style="position: absolute; top: 71px; left: 158px; display: none;">Koszalin</span>
+                <img src="images/Punkt.png" class="punkt" id="punkt33" style="top: 91px; left: 168px; display: none;"/> <!--Koszalin -->
+
+                <span class="city-name" id="NazwaMiasta34" style="position: absolute; top: 577px; left: 517px; display: none;">Tarnów</span>
+                <img src="images/Punkt.png" class="punkt" id="punkt34" style="top: 597px; left: 527px; display: none;"/> <!--Tarnów -->
+
+                <span class="city-name" id="NazwaMiasta35" style="position: absolute; top: 262px; left: 361px; display: none;">Włocławek</span>
+                <img src="images/Punkt.png" class="punkt" id="punkt35" style="top: 282px; left: 371px; display: none;"/> <!--Włocławek -->
+
+                <span class="city-name" id="NazwaMiasta36" style="position: absolute; top: 537px; left: 360px; display: none;">Chorzów</span>
+                <img src="images/Punkt.png" class="punkt" id="punkt36" style="top: 562px; left: 368px; display: none;"/> <!--Chorzów -->
+
+                <span class="city-name" id="NazwaMiasta37" style="position: absolute; top: 488px; left: 163px; display: none;">Wałbrzych</span>
+                <img src="images/Punkt.png" class="punkt" id="punkt37" style="top: 508px; left: 173px; display: none;"/> <!--Wałbrzych -->
+
+                <span class="city-name" id="NazwaMiasta38" style="position: absolute; top: 369px; left: 291px; display: none;">Kalisz</span>
+                <img src="images/Punkt.png" class="punkt" id="punkt38" style="top: 389px; left: 301px;"/> <!--Kalisz -->
+
+                <span class="city-name" id="NazwaMiasta39" style="position: absolute; top: 431px; left: 145px; display: none;">Legnica</span>
+                <img src="images/Punkt.png" class="punkt" id="punkt39" style="top: 451px; left: 155px;"/> <!--Legnica -->
+
+                <span class="city-name" id="NazwaMiasta40" style="position: absolute; top: 159px; left: 338px; display: none;">Grudziądz</span>
+                <img src="images/Punkt.png" class="punkt" id="punkt40" style="top: 179px; left: 348px;"/> <!--Grudziądz -->
+
+                <span class="city-name" id="NazwaMiasta41" style="position: absolute; top: 555px; left: 403px; display: none;">Jaworzno</span>
+                <img src="images/Punkt.png" class="punkt" id="punkt41" style="top: 575px; left: 394px;"/> <!--Jaworzno -->
+
+                <span class="city-name" id="NazwaMiasta42" style="position: absolute; top: 40px; left: 219px; display: none;">Słupsk</span>
+                <img src="images/Punkt.png" class="punkt" id="punkt42" style="top: 60px; left: 229px;"/> <!--Słupsk -->
+
+                <span class="city-name" id="NazwaMiasta43" style="position: absolute; top: 620px; left: 230px; display: none;">Jastrzębie-Zdrój</span>
+                <img src="images/Punkt.png" class="punkt" id="punkt43" style="top: 603px; left: 342px;"/> <!--Jastrzębie-Zdrój -->
+
+                <span class="city-name" id="NazwaMiasta44" style="position: absolute; top: 617px; left: 496px; display: none;">Nowy Sącz</span>
+                <img src="images/Punkt.png" class="punkt" id="punkt44" style="top: 637px; left: 506px;"/> <!--Nowy Sącz -->
+
+                <span class="city-name" id="NazwaMiasta45" style="position: absolute; top: 463px; left: 66px; display: none;">Jelenia Góra</span>
+                <img src="images/Punkt.png" class="punkt" id="punkt45" style="top: 488px; left: 122px;"/> <!--Jelenia Góra -->
+
+                <span class="city-name" id="NazwaMiasta46" style="position: absolute; top: 311px; left: 606px; display: none;">Siedlce</span>
+                <img src="images/Punkt.png" class="punkt" id="punkt46" style="top: 331px; left: 616px;"/> <!--Siedlce -->
+
+                <span class="city-name" id="NazwaMiasta47" style="position: absolute; top: 198px; left: 215px; display: none;">Piła</span>
+                <img src="images/Punkt.png" class="punkt" id="punkt47" style="top: 218px; left: 205px;"/> <!--Piła -->
+
+                <span class="city-name" id="NazwaMiasta48" style="position: absolute; top: 425px; left: 240px; display: none;">Ostrów Wielkopolski</span>
+                <img src="images/Punkt.png" class="punkt" id="punkt48" style="top: 405px; left: 280px;"/> <!--Ostrów Wielkopolski -->
 
             </div>
         <!-- </div> -->
@@ -264,6 +344,97 @@
                 document.getElementById("punkt30").style.display = "block";
             } else {
                 document.getElementById("punkt30").style.display = "none";
+            }
+
+            if (this.value >= 114000) { //Elbląg
+                document.getElementById("punkt31").style.display = "block";
+            } else {
+                document.getElementById("punkt31").style.display = "none";
+            }
+            if (this.value >= 113000) { //Płock
+                document.getElementById("punkt32").style.display = "block";
+            } else {
+                document.getElementById("punkt32").style.display = "none";
+            }
+            if (this.value >= 105000) { //Koszalin
+                document.getElementById("punkt33").style.display = "block";
+            } else {
+                document.getElementById("punkt33").style.display = "none";
+            }
+            if (this.value >= 104000) { //Tarnów
+                document.getElementById("punkt34").style.display = "block";
+            } else {
+                document.getElementById("punkt34").style.display = "none";
+            }
+            if (this.value >= 103000) { //Włocławek
+                document.getElementById("punkt35").style.display = "block";
+            } else {
+                document.getElementById("punkt35").style.display = "none";
+            }
+            if (this.value >= 102000) { //Chorzów
+                document.getElementById("punkt36").style.display = "block";
+            } else {
+                document.getElementById("punkt36").style.display = "none";
+            }
+            if (this.value >= 102000) { //Wałbrzych
+                document.getElementById("punkt37").style.display = "block";
+            } else {
+                document.getElementById("punkt37").style.display = "none";
+            }
+            if (this.value >= 94000) { //Kalisz
+                document.getElementById("punkt38").style.display = "block";
+            } else {
+                document.getElementById("punkt38").style.display = "none";
+            }
+            if (this.value >= 94000) { //Legnica
+                document.getElementById("punkt39").style.display = "block";
+            } else {
+                document.getElementById("punkt39").style.display = "none";
+            }
+            if (this.value >= 90000) { //Grudziądz
+                document.getElementById("punkt40").style.display = "block";
+            } else {
+                document.getElementById("punkt40").style.display = "none";
+            }
+            if (this.value >= 88000) { //Jaworzno
+                document.getElementById("punkt41").style.display = "block";
+            } else {
+                document.getElementById("punkt41").style.display = "none";
+            }
+            if (this.value >= 87000) { //Słupsk
+                document.getElementById("punkt42").style.display = "block";
+            } else {
+                document.getElementById("punkt42").style.display = "none";
+            }
+            if (this.value >= 84000) { //Jastrzębie-Zdrój
+                document.getElementById("punkt43").style.display = "block";
+            } else {
+                document.getElementById("punkt43").style.display = "none";
+            }
+            if (this.value >= 81000) { //Nowy Sącz
+                document.getElementById("punkt44").style.display = "block";
+            } else {
+                document.getElementById("punkt44").style.display = "none";
+            }
+            if (this.value >= 76000) { //Jelenia Góra
+                document.getElementById("punkt45").style.display = "block";
+            } else {
+                document.getElementById("punkt45").style.display = "none";
+            }
+            if (this.value >= 76000) { //Siedlce
+                document.getElementById("punkt46").style.display = "block";
+            } else {
+                document.getElementById("punkt46").style.display = "none";
+            }
+            if (this.value >= 71000) { //Piła
+                document.getElementById("punkt47").style.display = "block";
+            } else {
+                document.getElementById("punkt47").style.display = "none";
+            }
+            if (this.value >= 70000) { //Ostrów Wielkopolski
+                document.getElementById("punkt48").style.display = "block";
+            } else {
+                document.getElementById("punkt48").style.display = "none";
             }
         }
 
@@ -485,23 +656,149 @@
             $(this).attr("src", "images/Punkt.png");
             $("#NazwaMiasta30").fadeOut("fast");
         });
-
-        const app = Vue.createApp({
-            data() {
-                return {
-                    isGreen: true,
-                    przycisk_text: 'Zagraj w QUIZ'
-                }
-            },
-            methods: {
-                wcisnijPrzycisk() {
-                    this.isGreen = !this.isGreen;
-                    this.przycisk_text = this.isGreen ? 'Zagraj w QUIZ' : 'Ucz się';
-                }
-            }
+        $("#punkt31").mouseenter(function(){
+            $(this).hide().attr("src", "images/PunktZamalowany.png").fadeIn("fast");
+            $("#NazwaMiasta31").fadeIn("fast");
+        }).mouseleave(function(){
+            $(this).attr("src", "images/Punkt.png");
+            $("#NazwaMiasta31").fadeOut("fast");
+        });
+        $("#punkt32").mouseenter(function(){
+            $(this).hide().attr("src", "images/PunktZamalowany.png").fadeIn("fast");
+            $("#NazwaMiasta32").fadeIn("fast");
+        }).mouseleave(function(){
+            $(this).attr("src", "images/Punkt.png");
+            $("#NazwaMiasta32").fadeOut("fast");
+        });
+        $("#punkt33").mouseenter(function(){
+            $(this).hide().attr("src", "images/PunktZamalowany.png").fadeIn("fast");
+            $("#NazwaMiasta33").fadeIn("fast");
+        }).mouseleave(function(){
+            $(this).attr("src", "images/Punkt.png");
+            $("#NazwaMiasta33").fadeOut("fast");
+        });
+        $("#punkt34").mouseenter(function(){
+            $(this).hide().attr("src", "images/PunktZamalowany.png").fadeIn("fast");
+            $("#NazwaMiasta34").fadeIn("fast");
+        }).mouseleave(function(){
+            $(this).attr("src", "images/Punkt.png");
+            $("#NazwaMiasta34").fadeOut("fast");
+        });
+        $("#punkt35").mouseenter(function(){
+            $(this).hide().attr("src", "images/PunktZamalowany.png").fadeIn("fast");
+            $("#NazwaMiasta35").fadeIn("fast");
+        }).mouseleave(function(){
+            $(this).attr("src", "images/Punkt.png");
+            $("#NazwaMiasta35").fadeOut("fast");
+        });
+        $("#punkt36").mouseenter(function(){
+            $(this).hide().attr("src", "images/PunktZamalowany.png").fadeIn("fast");
+            $("#NazwaMiasta36").fadeIn("fast");
+        }).mouseleave(function(){
+            $(this).attr("src", "images/Punkt.png");
+            $("#NazwaMiasta36").fadeOut("fast");
+        });
+        $("#punkt37").mouseenter(function(){
+            $(this).hide().attr("src", "images/PunktZamalowany.png").fadeIn("fast");
+            $("#NazwaMiasta37").fadeIn("fast");
+        }).mouseleave(function(){
+            $(this).attr("src", "images/Punkt.png");
+            $("#NazwaMiasta37").fadeOut("fast");
+        });
+        $("#punkt38").mouseenter(function(){
+            $(this).hide().attr("src", "images/PunktZamalowany.png").fadeIn("fast");
+            $("#NazwaMiasta38").fadeIn("fast");
+        }).mouseleave(function(){
+            $(this).attr("src", "images/Punkt.png");
+            $("#NazwaMiasta38").fadeOut("fast");
+        });
+        $("#punkt39").mouseenter(function(){
+            $(this).hide().attr("src", "images/PunktZamalowany.png").fadeIn("fast");
+            $("#NazwaMiasta39").fadeIn("fast");
+        }).mouseleave(function(){
+            $(this).attr("src", "images/Punkt.png");
+            $("#NazwaMiasta39").fadeOut("fast");
+        });
+        $("#punkt40").mouseenter(function(){
+            $(this).hide().attr("src", "images/PunktZamalowany.png").fadeIn("fast");
+            $("#NazwaMiasta40").fadeIn("fast");
+        }).mouseleave(function(){
+            $(this).attr("src", "images/Punkt.png");
+            $("#NazwaMiasta40").fadeOut("fast");
+        });
+        $("#punkt41").mouseenter(function(){
+            $(this).hide().attr("src", "images/PunktZamalowany.png").fadeIn("fast");
+            $("#NazwaMiasta41").fadeIn("fast");
+        }).mouseleave(function(){
+            $(this).attr("src", "images/Punkt.png");
+            $("#NazwaMiasta41").fadeOut("fast");
+        });
+        $("#punkt42").mouseenter(function(){
+            $(this).hide().attr("src", "images/PunktZamalowany.png").fadeIn("fast");
+            $("#NazwaMiasta42").fadeIn("fast");
+        }).mouseleave(function(){
+            $(this).attr("src", "images/Punkt.png");
+            $("#NazwaMiasta42").fadeOut("fast");
+        });
+        $("#punkt43").mouseenter(function(){
+            $(this).hide().attr("src", "images/PunktZamalowany.png").fadeIn("fast");
+            $("#NazwaMiasta43").fadeIn("fast");
+        }).mouseleave(function(){
+            $(this).attr("src", "images/Punkt.png");
+            $("#NazwaMiasta43").fadeOut("fast");
+        });
+        $("#punkt44").mouseenter(function(){
+            $(this).hide().attr("src", "images/PunktZamalowany.png").fadeIn("fast");
+            $("#NazwaMiasta44").fadeIn("fast");
+        }).mouseleave(function(){
+            $(this).attr("src", "images/Punkt.png");
+            $("#NazwaMiasta44").fadeOut("fast");
+        });
+        $("#punkt45").mouseenter(function(){
+            $(this).hide().attr("src", "images/PunktZamalowany.png").fadeIn("fast");
+            $("#NazwaMiasta45").fadeIn("fast");
+        }).mouseleave(function(){
+            $(this).attr("src", "images/Punkt.png");
+            $("#NazwaMiasta45").fadeOut("fast");
+        });
+        $("#punkt46").mouseenter(function(){
+            $(this).hide().attr("src", "images/PunktZamalowany.png").fadeIn("fast");
+            $("#NazwaMiasta46").fadeIn("fast");
+        }).mouseleave(function(){
+            $(this).attr("src", "images/Punkt.png");
+            $("#NazwaMiasta46").fadeOut("fast");
+        });
+        $("#punkt47").mouseenter(function(){
+            $(this).hide().attr("src", "images/PunktZamalowany.png").fadeIn("fast");
+            $("#NazwaMiasta47").fadeIn("fast");
+        }).mouseleave(function(){
+            $(this).attr("src", "images/Punkt.png");
+            $("#NazwaMiasta47").fadeOut("fast");
+        });
+        $("#punkt48").mouseenter(function(){
+            $(this).hide().attr("src", "images/PunktZamalowany.png").fadeIn("fast");
+            $("#NazwaMiasta48").fadeIn("fast");
+        }).mouseleave(function(){
+            $(this).attr("src", "images/Punkt.png");
+            $("#NazwaMiasta48").fadeOut("fast");
         });
 
-        app.mount('#app');
+        // const app = Vue.createApp({
+        //     data() {
+        //         return {
+        //             isGreen: true,
+        //             przycisk_text: 'Zagraj w QUIZ'
+        //         }
+        //     },
+        //     methods: {
+        //         wcisnijPrzycisk() {
+        //             this.isGreen = !this.isGreen;
+        //             this.przycisk_text = this.isGreen ? 'Zagraj w QUIZ' : 'Ucz się';
+        //         }
+        //     }
+        // });
+
+        // app.mount('#app');
     </script>    
 
 </body>
